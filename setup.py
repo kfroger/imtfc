@@ -10,16 +10,16 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="imc",
+    name="imtfc",
     version="0.0.1",
-    description="In-memory Caching for Python function return values",
+    description="In-Memory Time-based Function Caching for Python 3 ",
     long_description=long_description,
-    url="https://github.com/thatguywiththatname/imc",
+    url="https://github.com/thatguywiththatname/imtfc",
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3"
     ],
-    keywords="In-memory cache caching",
+    keywords="in-memory cache caching time-based",
     packages=find_packages(exclude=["contrib", "docs", "tests", "examples"])
 )
