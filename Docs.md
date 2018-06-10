@@ -1,4 +1,4 @@
-**The library `imc` contains one class: `cache`**
+**The module `imtfc` contains one class: `cache`**
 
 ---
 
@@ -8,7 +8,7 @@
 
 `getFunction` must be a function. The return value of this is what is cached
 
-`expiryDelta` must be an `imc.expiryDelta` object. This is the amount of time that the data should be cached for before being renewed
+`expiryDelta` must be an `imtfc.expiryDelta` object. This is the amount of time that the data should be cached for before being renewed
 
 ---
 
