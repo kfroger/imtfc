@@ -22,7 +22,7 @@ def double(x):
 
 for num in range(10):
     doubled = double(num)
-    print("num: " + str(num) + " -> doubled: " + str(doubled))
+    print("num: " + str(num) + " - doubled: " + str(doubled))
     sleep(2)
 ```
 
@@ -45,20 +45,20 @@ The output will looks like this (with added comments to explain what is happenin
 
 ```python
 # Cache initialised, call double() on 0 and store the returned value in memory
-num: 0 -> doubled: 0
+num: 0 - doubled: 0
 # It has not been 6 seconds since we last called double(), so return our last calculated value from memory
-num: 1 -> doubled: 0
-num: 2 -> doubled: 0
+num: 1 - doubled: 0
+num: 2 - doubled: 0
 # It has now been 6 seconds, clear the cache and call double() on the new number, save this in memory
-num: 3 -> doubled: 6
-num: 4 -> doubled: 6
-num: 5 -> doubled: 6
+num: 3 - doubled: 6
+num: 4 - doubled: 6
+num: 5 - doubled: 6
 # It has been another 6 seconds, call double() again on the current number and store the new value
-num: 6 -> doubled: 12
-num: 7 -> doubled: 12
-num: 8 -> doubled: 12
+num: 6 - doubled: 12
+num: 7 - doubled: 12
+num: 8 - doubled: 12
 # Another 6 seconds, do the same
-num: 9 -> doubled: 18
+num: 9 - doubled: 18
 ```
 
 ## Installation
