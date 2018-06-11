@@ -13,7 +13,7 @@ class imtfc_cache(object):
             currentTime = datetime.now()
             currentDelta = currentTime - self.previousRequestTime
             if currentDelta >= self.cacheExpiryDelta:
-                self.cachedReturn = original_function()
+                self.cachedReturn = original_function(*args, **kwargs)
                 self.previousRequestTime = currentTime
             return self.cachedReturn
 
