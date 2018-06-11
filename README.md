@@ -57,7 +57,7 @@ num: 5 - doubled: 6
 num: 6 - doubled: 12
 num: 7 - doubled: 12
 num: 8 - doubled: 12
-# Another 6 seconds, do the same
+# Another 6 seconds have passed, do the same
 num: 9 - doubled: 18
 ```
 
