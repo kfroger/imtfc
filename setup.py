@@ -1,25 +1,20 @@
-from setuptools import setup, find_packages
-# To use a consistent encoding
-from codecs import open
-from os import path
+import setuptools
 
-here = path.abspath(path.dirname(__file__))
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-# Get the long description from the README file
-with open(path.join(here, "README.md"), encoding="utf-8") as f:
-    long_description = f.read()
-
-setup(
+setuptools.setup(
     name="imtfc",
     version="0.0.1",
-    description="In-Memory Time-based Function Caching for Python 3 ",
+    author="Simon J",
+    description="In-Memory Time-based Function Caching for Python 3",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/thatguywiththatname/imtfc",
+    packages=setuptools.find_packages(exclude=["contrib", "docs", "tests", "examples"]),
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3"
-    ],
-    keywords="in-memory cache caching time-based",
-    packages=find_packages(exclude=["contrib", "docs", "tests", "examples"])
+    ]
 )
