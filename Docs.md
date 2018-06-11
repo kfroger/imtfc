@@ -1,19 +1,9 @@
-**The module `imtfc` contains one class: `cache`**
+**The module `imtfc` contains one class which is a function decorator: `cache`**
 
 ---
 
 **class**
 
-`cache (  getFunction, expiryDelta )`
+`@imtfc_cache (  *args, **kwargs )`
 
-`getFunction` must be a function. The return value of this is what is cached
-
-`expiryDelta` must be an `imtfc.expiryDelta` object. This is the amount of time that the data should be cached for before being renewed
-
----
-
-**method**
-
-`cache.get`
-
-Returns the cached return value from `getFunction`
+`@imtfc_cache` accepts any arguments that `datetime.timedelta` also accepts. These arguments are passed into `timedelta`, and this is used as the expiry time for the cache

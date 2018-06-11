@@ -1,1 +1,1 @@
-from imtfc.imtfc import cache, timedelta
+from imtfc.imtfc import imtfc_cache

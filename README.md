@@ -2,7 +2,9 @@
 
 In-Memory Time-based Function Caching for Python 3
 
-Similar to [`functools.lru_cache`](https://docs.python.org/3/library/functools.html#functools.lru_cache), except `imtfc.cache` uses a time limit to decide whether or not to use the cached value (and whether or not to renew the cache), instead of the function parameters like `lru_cache` does
+Similar to [`@functools.lru_cache`](https://docs.python.org/3/library/functools.html#functools.lru_cache), this allows you to cache the return value of a function
+
+`@imtfc_cache` is different as it only caches the most recent value, and renewing the cache depends on a time limit
 
 It essentially allows you to store the returned variable from a function, and only allows that function to be executed again if a certain time has passed since it was last executed
 
@@ -11,17 +13,16 @@ See the example below for a more visual explanation
 ## Example
 
 ```python
-from imtfc import cache, timedelta
+from imtfc import imtfc_cache
 from time import sleep
 
+@imtfc_cache(seconds=20)
 def complicatedFunction():
     # Super complex code here
     return calculatedValue
 
-function_cache = cache(complicatedFunction, timedelta(seconds=20))
-
 for count in range(100):
-    data = function_cache.get()
+    data = complicatedFunction()
     sleep(5)
 ```
 
@@ -29,7 +30,7 @@ Step by step:
 
 - Import what we need
 - Define a function, `complicatedFunction`, that relies heavily on the CPU, and returns a value
-- Create an instance of the `cache` object, using `complicatedFunction` as the function parameter, and use a cache expiry time of 20 seconds
+- Decorate `complicatedFunction` using the `imtfc_cache` decorator and use a cache expiry time of 20 seconds
 - Start a loop, which requests `complicatedFunction`s value from the cache every 5 seconds
 
 When the loop happens, this is what happens inside the cache object:
