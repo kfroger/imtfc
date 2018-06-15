@@ -12,6 +12,6 @@
 
 **method**
 
-`wrapped_function.purge_cache`
+`wrapped_function.purge_cache()`
 
 This clears the cache
