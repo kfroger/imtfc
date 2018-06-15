@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="imtfc",
-    version="0.0.3",
+    version="0.0.4",
     author="Simon J",
     description="In-Memory Time-based Function Caching for Python 3",
     long_description=long_description,
