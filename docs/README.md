@@ -2,7 +2,9 @@
 
 ## **Function decorator** : `@imtfc_cache(  *args, **kwargs )`
 
-`@imtfc_cache` accepts any arguments that `datetime.timedelta` also accepts. These arguments are passed into a `timedelta` object, and this is used as the expiry time for the cache
+This is a class set up as a function decorator
+
+`@imtfc_cache` accepts any arguments that [`datetime.timedelta`](https://docs.python.org/3/library/datetime.html#timedelta-objects) also accepts. These arguments are passed into a [`timedelta`](https://docs.python.org/3/library/datetime.html#timedelta-objects) object, and this is used as the expiry time for the cache
 
 ### Implementation example
 
@@ -12,9 +14,11 @@ def wrapped_function():
   # Code here
 ```
 
-## **method** : `wrapped_function.purge_cache()`
+## **Method** : `wrapped_function.purge_cache()`
 
 This clears the cache
+
+The wrapped function inherits this method
 
 ### Implementation example
 
