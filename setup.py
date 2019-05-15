@@ -10,11 +10,11 @@ setuptools.setup(
     description="In-Memory Time-based Function Caching for Python 3",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/thatguywiththatname/imtfc",
+    url="https://github.com/psidex/imtfc",
     packages=setuptools.find_packages(exclude=["contrib", "docs", "tests", "examples"]),
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3"
-    ]
+        "Programming Language :: Python :: 3",
+    ],
 )

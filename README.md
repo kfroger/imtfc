@@ -65,7 +65,7 @@ num: 9 - doubled: 18
 
 **`pip install imtfc`**
 
-## [Documentation](https://github.com/thatguywiththatname/imtfc/blob/master/docs/README.md)
+## [Documentation](https://github.com/psidex/imtfc/blob/master/docs/README.md)
 
 ## Why?
 
